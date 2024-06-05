@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1 id="title" class="text-center my-4">¡Mirá la siguiente imagen!</h1>
+    <button id="hideButton" class="btn btn-primary">Ocultar imagen</button>
+    <button id="showButton" class="btn btn-secondary">Mostrar imagen</button>
+    <img id="image" class="img-fluid my-4" style="height: 300px" src="https://acerkate.com/storage/2021/05/diseno-web-scaled.jpg" alt="Imagen">
+    <script>
+        $(document).ready(function(){
+            $("#hideButton").click(function(){
+                $("#image").hide();
+                $("#title").text("¡No tenemos ninguna imagen!");
+            });
+            $("#showButton").click(function(){
+                $("#image").show();
+                $("#title").text("¡Mirá la siguiente imagen!");
+            });
+        });
+    </script>
+</body>
+</html>
